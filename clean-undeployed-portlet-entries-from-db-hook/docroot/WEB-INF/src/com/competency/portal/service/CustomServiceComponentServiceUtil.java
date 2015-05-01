@@ -29,11 +29,11 @@ public class CustomServiceComponentServiceUtil {
 			for (Group group : currentSites) {
 				//clean all undeployed portlets entries from database tables of all public layouts of respective site
 				count = cleanDBTablesEntriesOfUndeployedPortlets(group,userId,Boolean.FALSE);
-				_log.info("total number of undeployed portlets is "+count+" for "+group.getName()+" site public pages");
+				_log.info("total number of undeployed portlets are "+count+" for "+group.getName()+" site public pages");
 				//clean all undeployed portlets entries from database tables of all private layouts of respective site
 				privateLayout = Boolean.TRUE;
 				count = cleanDBTablesEntriesOfUndeployedPortlets(group,userId,Boolean.TRUE);
-				_log.info("total number of undeployed portlets is "+count+" for "+group.getName()+" site private pages");
+				_log.info("total number of undeployed portlets are "+count+" for "+group.getName()+" site private pages");
 			}
 		} catch (Exception e) {
 			_log.error(e, e);
